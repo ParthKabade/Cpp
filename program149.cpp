@@ -1,0 +1,32 @@
+#include<iostream>
+using namespace std;
+
+int main()
+{
+
+    int *Brr=NULL;                      //pointer
+    int iLength=0,iCnt=0;
+
+    cout<<"Enter the number of elements :\n";
+    cin>>iLength;
+
+    Brr=new int[iLength];                       //stores addres of array
+
+    cout<<"Enter the elements :\n";
+
+    for(iCnt=0;iCnt<iLength;iCnt++)
+    {
+        cin>>Brr[iCnt];
+    }
+
+    cout<<"Elements of the array are :\n";
+
+    for(iCnt=0;iCnt<iLength;iCnt++)
+    {
+        cout<<Brr[iCnt]<<endl;
+    }
+
+    delete []Brr;                   //this is also allowed(Brr[])
+
+    return 0;
+}
